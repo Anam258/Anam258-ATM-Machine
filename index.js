@@ -1,3 +1,4 @@
+#! bin /usr/env node
 import inquirer from "inquirer";
 console.log("Assalam O Alaikum, 'Welcome to the Al-Taqwa Bank' ATM Services !!!");
 let yourbalance = 70000; //Dollar
@@ -8,14 +9,7 @@ let pinAnswer = await inquirer.prompt([{
         type: "number",
     }]);
 if (pinAnswer.pin == yourpin) {
-    let pinAnswerCorrect = await inquirer.prompt([{
-            name: "pinAnwer",
-            message: "Please wait while transaction is being process...",
-        }]);
     console.log("Correct Pin Code!!!");
-}
-if (pinAnswer != yourpin) {
-    console.log("Opps!! Incorrect Pin Code :(");
 }
 let accounType = await inquirer.prompt([{
         name: "accountDetail",

@@ -1,9 +1,10 @@
 {
-  "name": "atm-machine",
+  "name": "anam258-atm-machine",
   "version": "1.0.0",
   "description": "Atm Machine of my choice.",
   "main": "index.js",
   "type": "module",
+  "bin":"index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
