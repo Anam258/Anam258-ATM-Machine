@@ -1,4 +1,4 @@
-#! bin /usr/env node
+#! usr/bin/env node
 import inquirer from "inquirer";
 console.log("Assalam O Alaikum, 'Welcome to the Al-Taqwa Bank' ATM Services !!!");
 let yourbalance = 70000; //Dollar
@@ -13,7 +13,10 @@ let pinAnswer = await inquirer.prompt([{
 if (pinAnswer.pin == yourpin){
 
     console.log("Correct Pin Code!!!");  
-}    
+}   
+else {
+    console.log("InCorrect Pin Code!!!"); 
+} 
   
 let accounType = await inquirer.prompt([{
     name: "accountDetail",
@@ -44,7 +47,8 @@ if(accounType.accountDetail == "current", "Saving", "default"){
         
     if(withdrawalAmount.amount > yourbalance){
         console.log ("Insufficient Balance :(")
-            }}
+            }
+        }
             if(operationAnwer.operation == "checkbalance")
             {
              console.log("Your  Balance is ", yourbalance);
@@ -68,5 +72,5 @@ console.log("Insuffienct Balance :(")
           }
           
 }
-
+console.log("JazakAllah for using our ATM Services");
 

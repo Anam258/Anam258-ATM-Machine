@@ -1,4 +1,4 @@
-#! bin /usr/env node
+#! usr/bin/env node
 import inquirer from "inquirer";
 console.log("Assalam O Alaikum, 'Welcome to the Al-Taqwa Bank' ATM Services !!!");
 let yourbalance = 70000; //Dollar
@@ -10,6 +10,9 @@ let pinAnswer = await inquirer.prompt([{
     }]);
 if (pinAnswer.pin == yourpin) {
     console.log("Correct Pin Code!!!");
+}
+else {
+    console.log("InCorrect Pin Code!!!");
 }
 let accounType = await inquirer.prompt([{
         name: "accountDetail",
@@ -58,3 +61,4 @@ if (accounType.accountDetail == "current", "Saving", "default") {
         }
     }
 }
+console.log("JazakAllah for Using our ATM Services");
