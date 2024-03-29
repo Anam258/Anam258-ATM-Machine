@@ -1,23 +1,20 @@
-#! usr/bin/env node
+#! /usr/bin/env node
+
 import inquirer from "inquirer";
-console.log("Assalam O Alaikum, 'Welcome to the Al-Taqwa Bank' ATM Services !!!");
+console.log("\n\t Assalam O Alaikum,\' Welcome to the Al-Taqwa Bank \'  ATM Services !!!\n");
 let yourbalance = 70000; //Dollar
 let yourpin = 2258;
 
 let pinAnswer = await inquirer.prompt([{
     name: "pin",
-    message: "Please Enter Your Pin Code",
+    message: "Please Enter Your Pin Code:",
     type: "number",
 }]);
 
 if (pinAnswer.pin == yourpin){
 
     console.log("Correct Pin Code!!!");  
-}   
-else {
-    console.log("InCorrect Pin Code!!!"); 
-} 
-  
+
 let accounType = await inquirer.prompt([{
     name: "accountDetail",
     message: "Please Select Account Type",
@@ -72,5 +69,8 @@ console.log("Insuffienct Balance :(")
           }
           
 }
-console.log("JazakAllah for using our ATM Services");
-
+console.log("\n\tJazakAllah for using our ATM Services!!\n");
+}   
+else {
+    console.log(" InCorrect Pin Code :( "); 
+} 
